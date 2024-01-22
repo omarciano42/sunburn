@@ -11,7 +11,9 @@
 	<title>{artist.name} @ sunburn</title>
 </svelte:head>
 
-<div class="flex flex-col sm:flex-row-reverse gap-6">
+<div class="flex flex-col sm:grid sm:grid-cols-4 gap-6">
 	<ArtistInfo {artist} />
-	<AlbumGallery albums={discography} size="small" />
+	<div class="col-span-3">
+		<AlbumGallery albums={discography} size="small" />
+	</div>
 </div>

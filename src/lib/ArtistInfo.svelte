@@ -1,15 +1,21 @@
 <script lang="ts">
 	import type { Artist, Label } from "bandcamp-fetch";
 
+	import proxyUrl from "./proxyUrl";
+
 	export let artist: Artist | Label;
 </script>
 
-<div class="flex flex-col bg-base-200 flex-1 gap-2 p-2 h-fit sm:w-2/5 rounded-box">
+<div class="flex flex-col bg-base-200 flex-1 gap-2 p-2 h-fit rounded-box">
 	{#if artist.imageUrl}
-		<img src={artist.imageUrl} alt={artist.name} class="rounded-box" />
+		<a href={`/artist?q=${artist.url}`}>
+			<img src={proxyUrl(artist.imageUrl)} alt={artist.name} class="rounded-box" />
+		</a>
 	{/if}
 
-	<h1 class="truncate">{artist.name}</h1>
+	<a href={`/artist?q=${artist.url}`}>
+		<h1 class="truncate">{artist.name}</h1>
+	</a>
 
 	{#if artist.description}
 		<p>{artist.description}</p>

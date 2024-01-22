@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { Album, Track } from "bandcamp-fetch";
+	import proxyUrl from "./proxyUrl";
 
 	export let album: Album | Track;
 
-	const releaseEndpoint = `/${album.type}?q=${album.url}`;
-
+	const releaseEndpoint = `/album?q=${album.url}`;
 	const artistEndpoint = `/artist?q=${album.artist?.url}`;
 </script>
 
@@ -12,7 +12,7 @@
 	{#if album.imageUrl}
 		<a href={releaseEndpoint}>
 			<img
-				src={album.imageUrl}
+				src={proxyUrl(album.imageUrl)}
 				alt={album.name}
 				class="w-full rounded-box hover:scale-95 transition delay-[25] ease-in-out"
 			/>
