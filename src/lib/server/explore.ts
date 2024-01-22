@@ -1,6 +1,6 @@
 import bandcamp from "bandcamp-fetch";
 
-export default async function () {
+export async function explore() {
 	const { items } = await bandcamp.discovery.discover();
 	return items;
 }

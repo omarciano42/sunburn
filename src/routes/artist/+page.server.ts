@@ -3,18 +3,18 @@ import { error } from "@sveltejs/kit";
 import { getArtistDiscography, getArtistInfo } from "$lib/server/artist.js";
 
 export async function load({ url: { searchParams } }) {
-	const artistURL = searchParams.get("q");
+	const artistUrl = searchParams.get("q");
 
-	if (!artistURL) error(403, "Missing artist url");
+	if (!artistUrl) error(403, "Missing artist url");
 
 	try {
-		const [info, discography] = await Promise.all([
-			getArtistInfo(artistURL),
-			getArtistDiscography(artistURL),
+		const [artist, discography] = await Promise.all([
+			getArtistInfo(artistUrl),
+			getArtistDiscography(artistUrl),
 		]);
 
 		return {
-			info,
+			artist,
 			discography,
 		};
 	} catch (e) {

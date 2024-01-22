@@ -1,15 +1,17 @@
 <script lang="ts">
 	import type { Artist, Label } from "bandcamp-fetch";
 
-	export let info: Artist | Label;
+	export let artist: Artist | Label;
 </script>
 
-<aside class="flex flex-col bg-base-200 flex-1 gap-2 p-2 h-fit">
-	{#if info.imageUrl}
-		<img src={info.imageUrl} alt={info.name} />
+<div class="flex flex-col bg-base-200 flex-1 gap-2 p-2 h-fit sm:w-2/5 rounded-box">
+	{#if artist.imageUrl}
+		<img src={artist.imageUrl} alt={artist.name} class="rounded-box" />
 	{/if}
-	<strong class="text-2xl">{info.name}</strong>
-	{#if info.description}
-		<p class="text-sm">{info.description}</p>
+
+	<h1 class="truncate">{artist.name}</h1>
+
+	{#if artist.description}
+		<p>{artist.description}</p>
 	{/if}
-</aside>
+</div>

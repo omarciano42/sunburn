@@ -8,13 +8,13 @@
 	const artistEndpoint = `/artist?q=${album.artist?.url}`;
 </script>
 
-<div class="w-full flex flex-col gap-0.5">
+<div class="flex flex-col gap-0.5">
 	{#if album.imageUrl}
 		<a href={releaseEndpoint}>
 			<img
 				src={album.imageUrl}
 				alt={album.name}
-				class="w-full rounded-md hover:scale-95 transition delay-[25] ease-in-out"
+				class="w-full rounded-box hover:scale-95 transition delay-[25] ease-in-out"
 			/>
 		</a>
 	{/if}
