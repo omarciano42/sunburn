@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Artist, Label } from "bandcamp-fetch";
 
-	import proxyUrl from "./proxyUrl";
+	import proxyUrl from "$lib/proxyUrl";
 
 	export let artist: Artist | Label;
 </script>

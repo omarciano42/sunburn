@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Track } from "bandcamp-fetch";
+
 	import TrackItem from "./TrackItem.svelte";
 
 	export let tracks: Track[];

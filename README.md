@@ -1,38 +1,35 @@
-# create-svelte
+![logo](static/logo.png "Island")
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# sunburn
 
-## Creating a project
+Sunburn is an alternative frontend (like Invidous, Nitter or Libreddit) for Bandcamp.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- (todo) search bands and albums
+- play tracks from the built-in player
+- serve images and audio through a proxy
+- beautiful and easy to use ui
+- no javascript required
+- (todo) theme customization
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Screenshots
+
+![explore](docs/screenshot.png)
+_Explore_
+
+![artist](docs/screenshot2.png)
+_Artist_
+
+![Album](docs/screenshot3.png)
+_Album_
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Clone the repo to your machine
+2. Install dependencies with `bun install`
+3. Run `bun dev --open` and all changes to the code will update the page in the browser
 
-```bash
-npm run dev
+## Deploying
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+(todo)

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Album, Track } from "bandcamp-fetch";
-	import AlbumItem from "$lib/AlbumItem.svelte";
+
+	import AlbumItem from "./AlbumItem.svelte";
 
 	export let albums: (Album | Track)[];
 	export let size: "small" | "big" = "big";

@@ -2,7 +2,7 @@
 	import type { Album } from "bandcamp-fetch";
 
 	import AlbumTags from "./AlbumTags.svelte";
-	import proxyUrl from "./proxyUrl";
+	import proxyUrl from "$lib/proxyUrl";
 
 	export let album: Album;
 </script>

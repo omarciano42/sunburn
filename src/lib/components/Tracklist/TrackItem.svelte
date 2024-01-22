@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Track } from "bandcamp-fetch";
 
-	import proxyUrl from "./proxyUrl";
+	import proxyUrl from "$lib/proxyUrl";
 
 	export let track: Track;
 	export let index: number;

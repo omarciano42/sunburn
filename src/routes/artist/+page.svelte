@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 
-	import AlbumGallery from "$lib/AlbumGallery.svelte";
-	import ArtistInfo from "$lib/ArtistInfo.svelte";
+	import AlbumGallery from "$lib/components/gallery/AlbumGallery.svelte";
+	import ArtistInfo from "$lib/components/artist/ArtistInfo.svelte";
 
 	const { artist, discography } = $page.data;
 </script>

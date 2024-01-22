@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 
-	import AlbumGallery from "$lib/AlbumGallery.svelte";
+	import AlbumGallery from "$lib/components/gallery/AlbumGallery.svelte";
 
 	const { albums } = $page.data;
 </script>

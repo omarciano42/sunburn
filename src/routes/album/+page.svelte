@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 
-	import ArtistInfo from "$lib/ArtistInfo.svelte";
-	import AlbumInfo from "$lib/AlbumInfo.svelte";
-	import Tracklist from "$lib/Tracklist.svelte";
+	import ArtistInfo from "$lib/components/artist/ArtistInfo.svelte";
+	import AlbumInfo from "$lib/components/album/AlbumInfo.svelte";
+	import Tracklist from "$lib/components/tracklist/Tracklist.svelte";
 
 	const { album, artist } = $page.data;
 </script>
