@@ -4,14 +4,12 @@
 	import proxyUrl from "$lib/proxyUrl";
 
 	export let album: Album | Track;
-
-	const releaseEndpoint = `/album?q=${album.url}`;
-	const artistEndpoint = `/artist?q=${album.artist?.url}`;
 </script>
 
 <div class="flex flex-col gap-0.5">
+	<!-- album thumbnail -->
 	{#if album.imageUrl}
-		<a href={releaseEndpoint}>
+		<a href={`/album?q=${album.url}`}>
 			<img
 				src={proxyUrl(album.imageUrl)}
 				alt={album.name}
@@ -19,8 +17,18 @@
 			/>
 		</a>
 	{/if}
-	<a class="truncate link-hover font-semibold" href={releaseEndpoint}>{album.name}</a>
-	{#if album.artist?.name}
-		<a class="text-xs truncate link-hover" href={artistEndpoint}> {album.artist.name}</a>
+
+	<!-- album name -->
+	<a class="truncate link-hover font-semibold" href={`/album?q=${album.url}`}>{album.name}</a>
+
+	<!-- album artist -->
+	{#if album.artist}
+		{#if album.artist.url}
+			<a class="text-xs truncate link-hover" href={`/artist?q=${album.artist.url}`}>
+				{album.artist.name}</a
+			>
+		{:else}
+			<span class="text-xs truncate">{album.artist.name}</span>
+		{/if}
 	{/if}
 </div>
