@@ -6,12 +6,11 @@ Sunburn is an alternative frontend (like Invidous, Nitter or Libreddit) for Band
 
 ## Features
 
-- (todo) search bands and albums
+- search bands and albums
 - play tracks from the built-in player
 - serve images and audio through a proxy
 - beautiful and easy to use ui
 - no javascript required
-- (todo) theme customization
 
 ## Screenshots
 
