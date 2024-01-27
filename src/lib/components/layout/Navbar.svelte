@@ -2,5 +2,7 @@
 	<a href="/" class="h-full">
 		<img src="/logo.png" alt="sunburn logo" class="h-full object-contain" />
 	</a>
-	<input type="text" placeholder="search" class="input input-bordered w-full" />
+	<form action="/search" class="w-full" data-sveltekit-reload>
+		<input type="text" placeholder="search" name="q" class="input input-bordered w-full" />
+	</form>
 </nav>
